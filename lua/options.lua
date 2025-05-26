@@ -11,3 +11,7 @@ vim.opt.wrap = false
 
 vim.o.background = "dark"
 
+vim.g.netrw_bufsettings = 'noma nomod nobl nowrap ro'
+-- vim.o.cursorline = true
+vim.o.termguicolors = true
+
