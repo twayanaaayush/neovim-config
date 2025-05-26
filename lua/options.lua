@@ -8,3 +8,6 @@ vim.opt.smartindent = true
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.wrap = false
+
+vim.o.background = "dark"
+
