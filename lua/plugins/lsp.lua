@@ -1,10 +1,10 @@
-vim.lsp.enable("ts_ls");
-vim.lsp.enable("cssls");
-vim.lsp.enable("html");
-vim.lsp.enable("jsonls");
-vim.lsp.enable("eslint");
-vim.lsp.enable("pyright");
-vim.lsp.enable("lua_ls");
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("cssls")
+vim.lsp.enable("html")
+vim.lsp.enable("jsonls")
+vim.lsp.enable("eslint") -- :MasonInstall eslint-lsp@4.5.0
+vim.lsp.enable("pyright")
+vim.lsp.enable("lua_ls")
 
 -- local on_attach = function(client, bufnr)
 -- 	-- format on save
