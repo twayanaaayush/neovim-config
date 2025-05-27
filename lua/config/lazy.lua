@@ -15,45 +15,16 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Make sure to setup `mapleader` and `maplocalleader` before
+-- loading lazy.nvim so that mappings are correct.
+-- This is also a good place to setup other settings (vim.opt)
+vim.g.mapleader = " "
+-- vim.g.maplocalleader = "\\"
+
 -- Setup lazy.nvim
 require("lazy").setup({
-  -- spec = {
-  --   -- import your plugins
-  --   { import = "plugins" },
-  -- },
-
-  -- automatically check for plugin updates
-  checker = { enabled = true },
-
-  -- colorscheme
-  { "drewtempelmeyer/palenight.vim" },
-
-  -- lualine
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+  spec = {
+    { import = "plugins.all" },
   },
-  
-  -- bracket stuff
-  {
-    "echasnovski/mini.pairs",
-    event = "VeryLazy",
-    opts = {
-      modes = { insert = true, command = true, terminal = false },
-      skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
-      skip_ts = { "string" },
-      skip_unbalanced = true,
-      markdown = true,
-    },
-    config = true,
-  },
-
-  -- telescope
-  {
-    'nvim-telescope/telescope.nvim',
-    lazy = true,
-    dependencies = {
-      {'nvim-lua/plenary.nvim'},
-    }
-  },
+  checker = { enabled = true, notify = false },
 })
