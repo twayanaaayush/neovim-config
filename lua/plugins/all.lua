@@ -61,4 +61,10 @@ return {
 		--    { "folke/neodev.nvim", opts = {} },
 		--},
 	},
+
+	-- comment
+	{
+		"numToStr/Comment.nvim",
+		opts = {},
+	},
 }
