@@ -10,6 +10,12 @@ map("n", "<leader>e", ":Ex<CR>")
 -- buffer
 map("n", "<leader>x", ":bd<CR>")
 
+-- panes
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-l>", "<C-w>l")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+
 -- editor
 map("n", "gd", "<C-]>") -- tagFunc, go to definition
 map("i", "<C-Space>", "<C-X><C-O>") -- omniFunc, omni mode completion
